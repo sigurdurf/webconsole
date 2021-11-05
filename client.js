@@ -15,12 +15,13 @@ async function connect() {
 async function sendGreeting() {
   try {
     connect().then(function (server) {
-      var greeting = "Hello from javascript land";
+      var greeting = document.getElementById("messageBox").value;
       server.send(greeting);
     });
   } catch (error) {
     console.log("Obbobobb", error);
   }
 }
-
-sendGreeting();
+document.getElementById("messageButton").addEventListener("click", (e) => {
+  sendGreeting();
+});
