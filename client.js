@@ -16,11 +16,10 @@ async function connect() {
     };
   });
 }
-async function sendGreeting() {
+async function sendGreeting(message) {
   try {
     connect().then(function (server) {
-      var greeting = document.getElementById("messageBox").value;
-      server.send(greeting);
+      server.send(message);
     });
   } catch (error) {
     console.log("Obbobobb", error);
@@ -37,11 +36,11 @@ let entries = [];
 
 terminal.onKey(function (key, ev) {
   // Enter
-  console.log(key);
-  console.log(ev);
   if (key.key == "\r") {
     if (curr_line) {
+      sendGreeting(curr_line);
       entries.push(curr_line);
+      curr_line = "";
       terminal.write("\r\n");
       terminal.prompt();
     }
