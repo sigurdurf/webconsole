@@ -1,0 +1,22 @@
+{
+  "name": "web-console",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigurdurf/webconsole.git"
+  },
+  "author": "Sigurður Baldvin Friðriksson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sigurdurf/webconsole/issues"
+  },
+  "homepage": "https://github.com/sigurdurf/webconsole#readme",
+  "devDependencies": {
+    "xterm": "^4.15.0"
+  }
+}
