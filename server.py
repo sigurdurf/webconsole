@@ -8,7 +8,7 @@ async def echo(websocket, path):
         if "javascript" in message:
             message = message.replace("javascript", "python")
         await websocket.send("My response to that is:\r\n")
-        await websocket.send(message + "\r\n")
+        await websocket.send(f">>> {message}\r\n")
 
 async def main():
     async with websockets.serve(echo, "localhost", 7560):
