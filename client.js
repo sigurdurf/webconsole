@@ -8,7 +8,7 @@ async function connect() {
       reject(err);
     };
     server.onmessage = function (event) {
-      console.log(event.data);
+      terminal.write(event.data);
     };
   });
 }
@@ -25,3 +25,7 @@ async function sendGreeting() {
 document.getElementById("messageButton").addEventListener("click", (e) => {
   sendGreeting();
 });
+
+var terminal = new Terminal();
+terminal.open(document.getElementById("terminal"));
+terminal.prompt();
