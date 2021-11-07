@@ -16,6 +16,7 @@ async def on_message(websocket, path):
 
         await websocket.send("My response to that is:\r\n")
         await websocket.send(f">>> {result}\r\n")
+        await websocket.send("Enter an equation: ")
 
 async def main():
 
