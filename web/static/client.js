@@ -26,10 +26,6 @@ async function sendGreeting(message) {
   }
 }
 
-document.getElementById("messageButton").addEventListener("click", (e) => {
-  sendGreeting();
-});
-
 terminal.open(document.getElementById("terminal"));
 let curr_line = "";
 let entries = [];
@@ -50,8 +46,6 @@ terminal.onKey(function (key, ev) {
       terminal.write("\b \b");
     }
   } else {
-    console.log(key);
-    console.log(curr_line);
     curr_line += key.key;
     terminal.write(key.key);
   }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',
+               filename='node_modules/xterm/css/xterm.css')}}"
+    />
+    <script src="{{url_for('static', filename='node_modules/xterm/lib/xterm.js')}}"></script>
+    <title>Index</title>
+  </head>
+  <body>
+    <div id="terminal"></div>
+  </body>
+  <script
+    src="{{url_for('static', filename='client.js')}}"
+    charset="utf-8"
+  ></script>
+</html>
