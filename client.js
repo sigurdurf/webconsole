@@ -44,7 +44,13 @@ terminal.onKey(function (key, ev) {
       terminal.write("\r\n");
       terminal.prompt();
     }
+  } else if (key.key === "\u007f") {
+    if (curr_line) {
+      curr_line = curr_line.slice(0, curr_line.length - 1);
+      terminal.write("\b \b");
+    }
   } else {
+    console.log(key);
     console.log(curr_line);
     curr_line += key.key;
     terminal.write(key.key);
