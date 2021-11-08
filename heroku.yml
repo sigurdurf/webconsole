@@ -1,4 +1,4 @@
 build:
   docker:
-    socket: socket-server/Dockerfile
-    web: web/Dockerfile
+    socket: socket-server/Dockerfile.socket-server
+    web: web/Dockerfile.web
