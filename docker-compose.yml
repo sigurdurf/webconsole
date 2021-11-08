@@ -4,12 +4,8 @@ services:
     build: ./web/
     ports:
       - 5000:5000
-    volumes:
-      - ./web/:/app
   socket-server:
     build: ./socket-server/
     ports:
       - 7560:7560
-    volumes:
-      - ./socket-server/:/app
 
