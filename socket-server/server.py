@@ -22,6 +22,7 @@ async def on_message(websocket, path):
 async def main():
     port = int(os.environ.get('PORT', 7560))
     async with websockets.serve(on_message, "0.0.0.0", port):
+        print(f"Running on port: {port}")
         await asyncio.Future() # Run forever
 
 if __name__ == "__main__":
