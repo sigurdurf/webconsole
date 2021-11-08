@@ -1,11 +1,16 @@
+const PORT = process.env.PORT || 7560
 var terminal = new Terminal({
   cursorBlink: "block",
 });
 
 async function connect() {
   return new Promise(function (resolve, reject) {
-    var server = new WebSocket("ws://localhost:7560");
-    server.onopen = function () {
+    if (window.location.protocol === "https:"){
+	var server = new WebSocket("wss://localhost:"+PORT);
+     } else {
+     	var server = new WebSocket("ws://localhost:"+PORT)
+     }
+	    server.onopen = function () {
       resolve(server);
     };
     server.onerror = function (err) {
