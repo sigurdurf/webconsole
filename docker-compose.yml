@@ -1,11 +1,15 @@
 version: '3'
 services:
   web:
-    build: ./web/
+    build:
+      context: ./web/
+      dockerfile: Dockerfile.web
     ports:
       - 5000:5000
   socket-server:
-    build: ./socket-server/
+    build:
+      context: ./socket-server/
+      dockerfile: Dockerfile.socket-server
     ports:
       - 7560:7560
 
