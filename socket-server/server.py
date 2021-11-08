@@ -1,3 +1,4 @@
+import os
 import asyncio
 import websockets
 from test_program import Calculator
@@ -19,8 +20,8 @@ async def on_message(websocket, path):
         await websocket.send("Enter an equation: ")
 
 async def main():
-
-    async with websockets.serve(on_message, "0.0.0.0", 7560):
+    port = int(os.environ.get('PORT', 7560))
+    async with websockets.serve(on_message, "0.0.0.0", port):
         await asyncio.Future() # Run forever
 
 if __name__ == "__main__":
