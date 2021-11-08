@@ -1,0 +1,4 @@
+build:
+  docker:
+    socket: socket-server/Dockerfile
+    web: web/Dockerfile
