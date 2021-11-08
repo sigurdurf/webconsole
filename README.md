@@ -1,12 +1,4 @@
-# Javascript dependancy
-`npm install`
+# Requirements
+Docker and Docker-compose
 
-# Python dependancy
-create a new virtualenv
-`python3 -m "virtualenv" venv`
-
-`source venv/bin/activate`
-
-`pip3 instll -r requirements.txt`
-
-
+Run `docker-compose up --build` to build both services and run in the current console

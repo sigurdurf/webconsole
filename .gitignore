@@ -3,4 +3,4 @@ web/static/node_modules/
 __pycache__/
 web/__pycache__/
 
-web/package-lock.json
+web/static/package-lock.json

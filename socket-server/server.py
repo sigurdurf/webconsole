@@ -20,7 +20,7 @@ async def on_message(websocket, path):
 
 async def main():
 
-    async with websockets.serve(on_message, "localhost", 7560):
+    async with websockets.serve(on_message, "0.0.0.0", 7560):
         await asyncio.Future() # Run forever
 
 if __name__ == "__main__":
